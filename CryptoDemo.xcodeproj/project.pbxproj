@@ -11,14 +11,23 @@
 		43ADBB23281D5DC700DD6E86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ADBB22281D5DC700DD6E86 /* ContentView.swift */; };
 		43ADBB25281D5DC900DD6E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43ADBB24281D5DC900DD6E86 /* Assets.xcassets */; };
 		43ADBB28281D5DC900DD6E86 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43ADBB27281D5DC900DD6E86 /* Preview Assets.xcassets */; };
+		43ADBB32281D5E7700DD6E86 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ADBB31281D5E7700DD6E86 /* Home.swift */; };
+		43ADBB54281D664600DD6E86 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ADBB53281D664600DD6E86 /* LineGraph.swift */; };
+		43ADBB56281D667A00DD6E86 /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ADBB55281D667A00DD6E86 /* CryptoModel.swift */; };
+		43ADBB58281D66F300DD6E86 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ADBB57281D66F300DD6E86 /* AppViewModel.swift */; };
+		43ADBB5B281D981A00DD6E86 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 43ADBB5A281D981A00DD6E86 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		43ADBB1D281D5DC700DD6E86 /* CriptoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CriptoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43ADBB1D281D5DC700DD6E86 /* CryptoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43ADBB20281D5DC700DD6E86 /* CriptoDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoDemoApp.swift; sourceTree = "<group>"; };
 		43ADBB22281D5DC700DD6E86 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		43ADBB24281D5DC900DD6E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43ADBB27281D5DC900DD6E86 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		43ADBB31281D5E7700DD6E86 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		43ADBB53281D664600DD6E86 /* LineGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
+		43ADBB55281D667A00DD6E86 /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
+		43ADBB57281D66F300DD6E86 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43ADBB5B281D981A00DD6E86 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,7 +45,7 @@
 		43ADBB14281D5DC700DD6E86 = {
 			isa = PBXGroup;
 			children = (
-				43ADBB1F281D5DC700DD6E86 /* CriptoDemo */,
+				43ADBB1F281D5DC700DD6E86 /* CryptoDemo */,
 				43ADBB1E281D5DC700DD6E86 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,20 +53,23 @@
 		43ADBB1E281D5DC700DD6E86 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				43ADBB1D281D5DC700DD6E86 /* CriptoDemo.app */,
+				43ADBB1D281D5DC700DD6E86 /* CryptoDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		43ADBB1F281D5DC700DD6E86 /* CriptoDemo */ = {
+		43ADBB1F281D5DC700DD6E86 /* CryptoDemo */ = {
 			isa = PBXGroup;
 			children = (
+				43ADBB30281D5E5F00DD6E86 /* ViewModel */,
+				43ADBB2F281D5E5400DD6E86 /* Model */,
+				43ADBB2E281D5E4B00DD6E86 /* View */,
 				43ADBB20281D5DC700DD6E86 /* CriptoDemoApp.swift */,
 				43ADBB22281D5DC700DD6E86 /* ContentView.swift */,
 				43ADBB24281D5DC900DD6E86 /* Assets.xcassets */,
 				43ADBB26281D5DC900DD6E86 /* Preview Content */,
 			);
-			path = CriptoDemo;
+			path = CryptoDemo;
 			sourceTree = "<group>";
 		};
 		43ADBB26281D5DC900DD6E86 /* Preview Content */ = {
@@ -67,12 +80,37 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		43ADBB2E281D5E4B00DD6E86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				43ADBB53281D664600DD6E86 /* LineGraph.swift */,
+				43ADBB31281D5E7700DD6E86 /* Home.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		43ADBB2F281D5E5400DD6E86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43ADBB55281D667A00DD6E86 /* CryptoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		43ADBB30281D5E5F00DD6E86 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				43ADBB57281D66F300DD6E86 /* AppViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		43ADBB1C281D5DC700DD6E86 /* CriptoDemo */ = {
+		43ADBB1C281D5DC700DD6E86 /* CryptoDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 43ADBB2B281D5DC900DD6E86 /* Build configuration list for PBXNativeTarget "CriptoDemo" */;
+			buildConfigurationList = 43ADBB2B281D5DC900DD6E86 /* Build configuration list for PBXNativeTarget "CryptoDemo" */;
 			buildPhases = (
 				43ADBB19281D5DC700DD6E86 /* Sources */,
 				43ADBB1A281D5DC700DD6E86 /* Frameworks */,
@@ -82,9 +120,12 @@
 			);
 			dependencies = (
 			);
-			name = CriptoDemo;
+			name = CryptoDemo;
+			packageProductDependencies = (
+				43ADBB5A281D981A00DD6E86 /* SDWebImageSwiftUI */,
+			);
 			productName = CriptoDemo;
-			productReference = 43ADBB1D281D5DC700DD6E86 /* CriptoDemo.app */;
+			productReference = 43ADBB1D281D5DC700DD6E86 /* CryptoDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +143,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 43ADBB18281D5DC700DD6E86 /* Build configuration list for PBXProject "CriptoDemo" */;
+			buildConfigurationList = 43ADBB18281D5DC700DD6E86 /* Build configuration list for PBXProject "CryptoDemo" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,11 +152,14 @@
 				Base,
 			);
 			mainGroup = 43ADBB14281D5DC700DD6E86;
+			packageReferences = (
+				43ADBB59281D981A00DD6E86 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 43ADBB1E281D5DC700DD6E86 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				43ADBB1C281D5DC700DD6E86 /* CriptoDemo */,
+				43ADBB1C281D5DC700DD6E86 /* CryptoDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -137,8 +181,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43ADBB54281D664600DD6E86 /* LineGraph.swift in Sources */,
 				43ADBB23281D5DC700DD6E86 /* ContentView.swift in Sources */,
+				43ADBB58281D66F300DD6E86 /* AppViewModel.swift in Sources */,
+				43ADBB32281D5E7700DD6E86 /* Home.swift in Sources */,
 				43ADBB21281D5DC700DD6E86 /* CriptoDemoApp.swift in Sources */,
+				43ADBB56281D667A00DD6E86 /* CryptoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +314,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CriptoDemo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CryptoDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = M3C8BZ4H8Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -295,7 +343,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CriptoDemo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CryptoDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = M3C8BZ4H8Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -320,7 +368,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		43ADBB18281D5DC700DD6E86 /* Build configuration list for PBXProject "CriptoDemo" */ = {
+		43ADBB18281D5DC700DD6E86 /* Build configuration list for PBXProject "CryptoDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43ADBB29281D5DC900DD6E86 /* Debug */,
@@ -329,7 +377,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		43ADBB2B281D5DC900DD6E86 /* Build configuration list for PBXNativeTarget "CriptoDemo" */ = {
+		43ADBB2B281D5DC900DD6E86 /* Build configuration list for PBXNativeTarget "CryptoDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				43ADBB2C281D5DC900DD6E86 /* Debug */,
@@ -339,6 +387,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		43ADBB59281D981A00DD6E86 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		43ADBB5A281D981A00DD6E86 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43ADBB59281D981A00DD6E86 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 43ADBB15281D5DC700DD6E86 /* Project object */;
 }
